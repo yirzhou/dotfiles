@@ -1,0 +1,50 @@
+{
+  "editor.fontFamily": "'Hasklug Nerd Font Mono',  'Source Code Pro for Powerline', 'Fira Code'",
+  "editor.fontLigatures": true,
+  "workbench.iconTheme": "material-icon-theme",
+  "launch": {
+    "configurations": [],
+    "compounds": []
+  },
+  "explorer.confirmDragAndDrop": false,
+  "editor.fontWeight": "normal",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "window.zoomLevel": 1,
+  "C_Cpp.updateChannel": "Insiders",
+  "clang-format.executable": "/usr/bin/clang-format",
+  "clang-format.fallbackStyle": "Google",
+  "settingsSync.ignoredExtensions": ["ms-vscode-remote.remote-wsl"],
+  "cmake.configureOnOpen": false,
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "files.autoSave": "afterDelay",
+  "go.useLanguageServer": true,
+  "editor.formatOnSave": true,
+  "[go]": {
+    "editor.insertSpaces": false,
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    }
+  },
+  "[cpp]": {
+    "editor.defaultFormatter": "xaver.clang-format",
+    "editor.detectIndentation": false,
+    "editor.tabSize": 4
+  },
+  "clang-format.language.cpp.style": "Webkit",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.colorTheme": "Snazzy Operator",
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}
