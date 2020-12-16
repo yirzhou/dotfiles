@@ -1,0 +1,25 @@
+{
+  "dockerComposeFile": [
+    // My docker-compose yml files
+    "docker-compose.override.yml"
+  ],
+  "initializeCommand": "", //
+  "postCreateCommand": "", // Useful for starting a service after startup
+  "service": "dev-env",
+  "workspaceFolder": "/workspace",
+  "extensions": [
+    "ms-vscode.cpptools",
+    "ms-vscode.cmake-tools",
+    "twxs.cmake",
+    "ms-python.python",
+    "pucelle.run-on-save"
+  ],
+  "settings": {
+    "http.proxyStrictSSL": false,
+    "C_Cpp.default.includePath": ["/usr/include", "/workspace/**"],
+    "C_Cpp.default.cStandard": "c11",
+    "C_Cpp.default.cppStandard": "c++17",
+    "C_Cpp.default.intelliSenseMode": "gcc-x64",
+    "C_Cpp.updateChannel": "Default"
+  }
+}

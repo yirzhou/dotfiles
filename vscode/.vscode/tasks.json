@@ -1,0 +1,47 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Generate Coverage Report",
+      "type": "shell",
+      "command": "lcov --capture --directory . --output-file lcov.info && genhtnml lcov.info --output-directory coverage",
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+      },
+      "options": {
+        "cwd": "${workspaceFolder}/build"
+      },
+      "promptOnClose": false,
+      "problemMatcher": []
+    },
+    {
+      "label": "Generate Coverage Info",
+      "type": "shell",
+      "command": "lcov --capture --directory . --output-file lcov.info",
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+      },
+      "options": {
+        "cwd": "${workspaceFolder}/build"
+      },
+      "promptOnClose": false,
+      "problemMatcher": []
+    },
+    {
+      "label": "Clean Coverage Info",
+      "type": "shell",
+      "command": "lcov --zerocounters --directory . && rm -rf coverage lcov.info",
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+      },
+      "options": {
+        "cwd": "${workspaceFolder}/build"
+      },
+      "promptOnClose": false,
+      "problemMatcher": []
+    }
+  ]
+}
