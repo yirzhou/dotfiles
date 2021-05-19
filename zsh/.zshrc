@@ -9,6 +9,30 @@ export HISTCONTROL=ignoreboth:erasedups
 PATH="/Applications/CMake.app/Contents/bin":"$PATH"
 PATH="/Users/zhouyiren/bin/":"$PATH"
 
+# SOCKS5 proxy port
+SOCKS_PORT=7891
+
+# Go Proxy (for use in China)
+export GOPROXY=https://goproxy.io
+
+# Turn on Clash
+function proxy_on() {
+  export no_proxy="localhost,127.0.0.1,localaddress,.localdomain.com"
+  export http_proxy="http://127.0.0.1:7890"
+  export https_proxy=$http_proxy
+  #export all_proxy=socks5://127.0.0.1:7890 # or this line
+  echo -e "已开启代理"
+}
+
+# Turn off Clash
+function proxy_off() {
+  unset http_proxy
+  unset https_proxy
+  echo -e "已关闭代理"
+}
+
+export GOPATH="/Users/zhouyiren/go/"
+
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/zhouyiren/.oh-my-zsh"
 source "$ZSH/oh-my-zsh.sh"
@@ -71,3 +95,4 @@ export PATH="/usr/local/opt/llvm/bin:$PATH"
 # if command -v tmux &>/dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
 #  exec tmux
 # fi
+export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles/
