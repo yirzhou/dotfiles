@@ -1,3 +1,3 @@
-# stuff-that-makes-my-life-easier
+# Dotfiles
 
 Stuff that speeds up my workflow, including workspace setups, development, etc.
