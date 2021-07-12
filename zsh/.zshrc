@@ -1,4 +1,3 @@
-# Profiling ZSH
 zmodload zsh/zprof
 
 # Don't show duplicates in history
@@ -8,9 +7,9 @@ export HISTCONTROL=ignoreboth:erasedups
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 PATH="/Applications/CMake.app/Contents/bin":"$PATH"
 PATH="/Users/zhouyiren/bin/":"$PATH"
+PATH="/Users/zhouyiren/.cargo/bin":"$PATH"
 
-# SOCKS5 proxy port
-SOCKS_PORT=7891
+export KITTY_CONFIG_DIRECTORY="/Users/zhouyiren/.config/kitty/"
 
 # Go Proxy (for use in China)
 export GOPROXY=https://goproxy.io
@@ -20,15 +19,15 @@ function proxy_on() {
   export no_proxy="localhost,127.0.0.1,localaddress,.localdomain.com"
   export http_proxy="http://127.0.0.1:7890"
   export https_proxy=$http_proxy
-  #export all_proxy=socks5://127.0.0.1:7890 # or this line
-  echo -e "已开启代理"
+  # export all_proxy=socks5://127.0.0.1:7890 # or this line
+  # echo -e "Proxy ON!"
 }
 
 # Turn off Clash
 function proxy_off() {
   unset http_proxy
   unset https_proxy
-  echo -e "已关闭代理"
+  # echo -e "Proxy OFF"
 }
 
 export GOPATH="/Users/zhouyiren/go/"
@@ -40,6 +39,11 @@ source "$ZSH/oh-my-zsh.sh"
 # Interactive mv and rm
 alias mv='mv -i'
 alias rm='rm -i'
+alias cpan='/System/Volumes/Data/usr/local/Cellar/perl/5.32.1_1/bin/cpan'
+
+# rsbday
+RSBDAY_BASE_PATH='/Users/zhouyiren/Projects/IsolatedSoul/rsbday'
+alias rsbday='$RSBDAY_BASE_PATH/target/release/rsbday --db-path /$RSBDAY_BASE_PATH/data/bdays.db'
 
 # Python 3.9
 alias python="/usr/local/bin/python3"
@@ -50,10 +54,13 @@ alias nomore="fd -H '^\.DS_Store$' -tf -I /Users/$whoami -X rm"
 
 # Use neovim by default
 EDITOR='nvim'
-alias vim=nvim
+alias vim="node --version >> /dev/null && nvim"
+alias neovide="/Users/zhouyiren/Projects/neovide/target/release/neovide"
 
 # Use exa instead of ls
 alias ls="exa --header --long -g -t=mod --time-style=long-iso --grid --icons"
+# Use zoxide instead of cd
+alias cd="z"
 
 HIST_STAMPS="mm/dd/yyyy"
 
@@ -68,6 +75,9 @@ fi
 # starship
 export STARSHIP_CONFIG="$HOME/.config/starship/config.toml"
 eval "$(starship init zsh)"
+
+# zoxide - intelligent cd
+eval "$(zoxide init zsh)"
 
 # zsh plugins
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -95,4 +105,6 @@ export PATH="/usr/local/opt/llvm/bin:$PATH"
 # if command -v tmux &>/dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
 #  exec tmux
 # fi
+
 export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles/
+proxy_on
