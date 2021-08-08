@@ -86,11 +86,9 @@
 
   {
     "type": "battery",
-    "image": {
-      "filePath": "~/Library/Application Support/MTMR/images/lightning.png"
-    },
     "refreshInterval": 60,
     "width": 60,
+    "remainingTime": true,
     "align": "right",
     "bordered": false
   },
