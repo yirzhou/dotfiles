@@ -1,3 +1,4 @@
 let g:lightline = {
-      \ 'colorscheme': 'nord',
+      \ 'colorscheme': 'solarized',
+      \ 'background': 'dark',
       \ }

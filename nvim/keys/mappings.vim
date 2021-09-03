@@ -11,7 +11,7 @@ inoremap ;; <Esc>
 " http://stackoverflow.com/questions/7722177/how-do-i-map-ctrl-x-ctrl-o-to-ctrl-space-in-terminal-vim#answer-24550772
 "nnoremap <C-Space> :NERDTreeToggle<CR>
 "nmap <C-@> <C-Space>
-nnoremap <silent> <Space> :NERDTreeToggle<CR>
+nnoremap <silent> <Space> :NvimTreeToggle<CR>
 
 " Better nav for omnicomplete
 inoremap <expr> <c-j> ("\<C-n>")

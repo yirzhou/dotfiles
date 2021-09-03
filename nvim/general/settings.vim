@@ -1,5 +1,6 @@
-" set leader key
+ " set leader key
 let g:mapleader = "\<Space>"
+let base16colorspace=256
 
 syntax enable                           " Enables syntax highlighing
 set hidden                              " Required to keep multiple buffers open multiple buffers
@@ -33,10 +34,14 @@ set updatetime=300                      " Faster completion
 set timeoutlen=500                      " By default timeoutlen is 1000 ms
 set formatoptions-=cro                  " Stop newline continution of comments
 set clipboard=unnamedplus               " Copy paste between vim and everything else
+set termguicolors                       " Enable True Color
 "set autochdir                           " Your working directory will always be the same as your working directory
 set relativenumber
 set splitbelow
 set splitright
+" set textwidth=80
+set guifont=Iosevka\ SS04:h14
+filetype plugin indent on
 
 au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
 
