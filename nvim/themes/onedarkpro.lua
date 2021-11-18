@@ -1,0 +1,2 @@
+require('onedarkpro').load()
+

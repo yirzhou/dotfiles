@@ -9,6 +9,7 @@ source $HOME/.config/nvim/plug-config/lsp-config.vim
 source $HOME/.config/nvim/plug-config/rust.vim
 source $HOME/.config/nvim/plug-config/neoformat.vim
 source $HOME/.config/nvim/plug-config/indent-blankline.vim
+luafile $HOME/.config/nvim/themes/vscode.lua
 luafile $HOME/.config/nvim/plug-config/lualine.lua
 luafile $HOME/.config/nvim/plug-config/compe-config.lua
 luafile $HOME/.config/nvim/plug-config/python-lsp.lua
@@ -20,4 +21,6 @@ luafile $HOME/.config/nvim/plug-config/lsp-rooter.lua
 luafile $HOME/.config/nvim/plug-config/lsp-install.lua
 luafile $HOME/.config/nvim/plug-config/trouble.lua
 luafile $HOME/.config/nvim/plug-config/fterm.lua
-luafile $HOME/.config/nvim/themes/vscode.lua
+luafile $HOME/.config/nvim/plug-config/kommentary.lua
+luafile $HOME/.config/nvim/plug-config/nvim-tree.lua
+

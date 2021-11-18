@@ -40,7 +40,7 @@ set relativenumber
 set splitbelow
 set splitright
 " set textwidth=80
-set guifont=Iosevka\ SS04:h14
+set guifont=JetBrainsMono\ Nerd\ Font\ Mono
 filetype plugin indent on
 
 au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC

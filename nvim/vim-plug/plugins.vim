@@ -8,6 +8,9 @@ endif
 
 call plug#begin('~/.config/nvim/autoload/plugged')
 
+    " Commenting
+    Plug 'b3nj5m1n/kommentary'
+
     " File Explorer
     Plug 'kyazdani42/nvim-tree.lua'
 
@@ -34,8 +37,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'airblade/vim-rooter'
 
     " Themes
-    " Plug 'rrethy/nvim-base16'
-    " Plug 'ishan9299/nvim-solarized-lua'
+    Plug 'RRethy/nvim-base16'
     Plug 'Mofiqul/vscode.nvim'
 
     " Git integration

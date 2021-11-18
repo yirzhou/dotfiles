@@ -12,5 +12,5 @@ require'FTerm'.setup({
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 
-map('n', '<D-t>', '<CMD>lua require("FTerm").toggle()<CR>', opts)
-map('t', '<D-t>', '<C-\\><C-n><CMD>lua require("FTerm").toggle()<CR>', opts)
+map('n', '<S-t>', '<CMD>lua require("FTerm").toggle()<CR>', opts)
+map('t', '<S-t>', '<C-\\><C-n><CMD>lua require("FTerm").toggle()<CR>', opts)
