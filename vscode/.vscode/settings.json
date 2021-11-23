@@ -1,105 +1,241 @@
 {
-  "C_Cpp.intelliSenseEngineFallback": "Disabled",
-  "runOnSave.commands": [
-    {
-      "match": ".*\\.(h|cpp)$",
-      "command": "/usr/bin/clang-format -i ${file}",
-      "runIn": "backend",
-      "runningStatusMessage": "clang-formatting ${file} ...",
-      "finishStatusMessage": "bde-formatted ${file}"
-    }
-  ],
-  "editor.rulers": [79],
   "workbench.colorCustomizations": {
-    "editorRuler.foreground": "#8d2a4e"
+    "[Nord]": {
+      "editor.selectionHighlightBackground": "#2e3440",
+      "editor.selectionHighlightBorder": "#FFFFFF15",
+      "editor.background": "#272c36",
+      "editorGutter.background": "#272c36",
+      "tab.activeBackground": "#2e3440",
+      "tab.inactiveBackground": "#272c36",
+      "editorGroupHeader.tabsBackground": "#272c36",
+      "editorGroupHeader.tabsBorder": "#2e3440",
+      "editorLineNumber.foreground": "#4C566A"
+    }
   },
-  "files.associations": {
-    "array": "cpp",
-    "*.tcc": "cpp",
-    "functional": "cpp",
-    "random": "cpp",
-    "iomanip": "cpp",
-    "istream": "cpp",
-    "streambuf": "cpp",
-    "ostream": "cpp",
-    "iosfwd": "cpp",
-    "new": "cpp",
-    "deque": "cpp",
-    "list": "cpp",
-    "string": "cpp",
-    "unordered_map": "cpp",
-    "unordered_set": "cpp",
-    "vector": "cpp",
-    "sstream": "cpp",
-    "string_view": "cpp",
-    "system_error": "cpp",
-    "atomic": "cpp",
-    "future": "cpp",
-    "stdexcept": "cpp",
-    "condition_variable": "cpp",
-    "iostream": "cpp",
-    "*.ipp": "cpp",
-    "fstream": "cpp",
-    "__locale": "cpp",
-    "__string": "cpp",
-    "bitset": "cpp",
-    "set": "cpp",
-    "__node_handle": "cpp",
-    "__bit_reference": "cpp",
-    "__config": "cpp",
-    "__debug": "cpp",
-    "__errc": "cpp",
-    "__functional_base": "cpp",
-    "__hash_table": "cpp",
-    "__mutex_base": "cpp",
-    "__nullptr": "cpp",
-    "__split_buffer": "cpp",
-    "__threading_support": "cpp",
-    "__tree": "cpp",
-    "__tuple": "cpp",
-    "algorithm": "cpp",
-    "any": "cpp",
-    "bit": "cpp",
-    "cctype": "cpp",
-    "chrono": "cpp",
-    "cmath": "cpp",
-    "complex": "cpp",
-    "cstdarg": "cpp",
-    "cstddef": "cpp",
-    "cstdint": "cpp",
-    "cstdio": "cpp",
-    "cstdlib": "cpp",
-    "cstring": "cpp",
-    "ctime": "cpp",
-    "cwchar": "cpp",
-    "cwctype": "cpp",
-    "exception": "cpp",
-    "initializer_list": "cpp",
-    "ios": "cpp",
-    "iterator": "cpp",
-    "limits": "cpp",
-    "locale": "cpp",
-    "map": "cpp",
-    "memory": "cpp",
-    "mutex": "cpp",
-    "numeric": "cpp",
-    "optional": "cpp",
-    "ratio": "cpp",
-    "stack": "cpp",
-    "thread": "cpp",
-    "tuple": "cpp",
-    "type_traits": "cpp",
-    "typeindex": "cpp",
-    "typeinfo": "cpp",
-    "utility": "cpp",
-    "valarray": "cpp",
-    "variant": "cpp"
+
+  "editor.semanticTokenColorCustomizations": {
+    "[Default Dark+]": {
+      // Apply to this theme only
+      "enabled": true,
+      "rules": {
+        "magicFunction:python": "#ee0000",
+        "function.declaration:python": "#990000",
+        "*.decorator:python": "#0000dd",
+        "*.typeHint:python": "#5500aa",
+        "*.typeHintComment:python": "#aaaaaa",
+        "parameter:python": "#aaaaaa"
+      }
+    }
   },
-  "C_Cpp.configurationWarnings": "Disabled",
-  "C_Cpp.errorSquiggles": "Enabled",
-  "cmake.generator": "Ninja",
-  "python.linting.pylintEnabled": true,
-  "python.linting.enabled": true,
-  "python.linting.flake8Enabled": false,
-  "python.pythonPath": "/usr/local/opt/python@3.9/bin/python3.9"
+
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "name": "italic font",
+        "scope": [
+          "comment",
+          "keyword",
+          "storage",
+          "keyword.control",
+          "keyword.control.from",
+          "keyword.control.flow",
+          "keyword.operator.new",
+          "keyword.control.import",
+          "keyword.control.export",
+          "keyword.control.default",
+          "keyword.control.trycatch",
+          "keyword.control.conditional",
+          "storage.type",
+          "storage.type.class",
+          "storage.modifier.tsx",
+          "storage.type.function",
+          "storage.modifier.async",
+          "variable.language",
+          "variable.language.this",
+          "variable.language.super",
+          "meta.class",
+          "meta.var.expr",
+          "constant.language.null",
+          "support.type.primitive",
+          "entity.name.method.js",
+          "entity.other.attribute-name",
+          "punctuation.definition.comment",
+          "text.html.basic entity.other.attribute-name",
+          "tag.decorator.js entity.name.tag.js",
+          "tag.decorator.js punctuation.definition.tag.js",
+          "source.js constant.other.object.key.js string.unquoted.label.js"
+        ],
+        "settings": {
+          "fontStyle": "italic"
+        }
+      }
+    ]
+  },
+
+  "window.autoDetectColorScheme": true,
+  "terminal.integrated.fontFamily": "Iosevka Nerd Font Mono",
+  "terminal.integrated.fontSize": 10,
+  "terminal.integrated.cursorStyle": "underline",
+  "terminal.external.osxExec": "Alacritty.app",
+  "terminal.integrated.profiles.osx": {
+    "bash": {
+      "path": "bash",
+      "args": ["-l"],
+      "icon": "terminal-bash"
+    },
+    "zsh": {
+      "path": "zsh",
+      "args": ["-l"]
+    },
+    "tmux": {
+      "path": "tmux",
+      "icon": "terminal-tmux"
+    },
+    "pwsh": {
+      "path": "pwsh",
+      "icon": "terminal-powershell"
+    },
+    "fish": {
+      "path": "/usr/local/bin/fish"
+    }
+  },
+  "terminal.integrated.defaultProfile.osx": "fish",
+
+  "files.autoSaveDelay": 2000,
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  },
+
+  "explorer.confirmDragAndDrop": false,
+  "settingsSync.ignoredExtensions": ["ms-vscode-remote.remote-wsl"],
+  "editor.fontFamily": "'Iosevka', 'Hasklig', 'Ligalex Mono', 'JetBrains Mono'",
+  "editor.fontSize": 12,
+  "editor.fontWeight": "normal",
+  "editor.minimap.enabled": false,
+  "editor.fontLigatures": true,
+  "editor.semanticHighlighting.enabled": false,
+  "editor.formatOnSave": true,
+  "editor.suggestSelection": "first",
+  // "editor.wordWrap": "wordWrapColumn",
+  // "editor.wordWrapColumn": 80,
+  // "editor.wordBasedSuggestions": false,
+
+  "launch": {
+    "configurations": [],
+    "compounds": []
+  },
+
+  // JavaScript, TypeScript, HTML, CSS
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[latex]": {
+    "editor.formatOnSave": true
+  },
+  // Go
+  "go.useLanguageServer": true,
+  "go.toolsManagement.autoUpdate": true,
+  "[go]": {
+    "editor.insertSpaces": false,
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true,
+      "source.fixAll.markdownlint": true
+    }
+  },
+
+  // C/C++
+  "clang-format.executable": "/usr/local/opt/llvm/bin/clang-format",
+  "clang-format.fallbackStyle": "Google",
+  "clang-format.language.cpp.style": "Google",
+  "C_Cpp.updateChannel": "Insiders",
+  "C_Cpp.intelliSenseEngine": "Disabled",
+  "cmake.configureOnOpen": false,
+  "clangd.path": "/Users/zhouyiren/Library/Application Support/Code/User/globalStorage/llvm-vs-code-extensions.vscode-clangd/install/13.0.0/clangd_13.0.0/bin/clangd",
+  "[cpp]": {
+    "editor.defaultFormatter": "xaver.clang-format",
+    "editor.detectIndentation": false,
+    "editor.tabSize": 4
+  },
+  "[c]": {
+    "editor.defaultFormatter": "xaver.clang-format",
+    "editor.detectIndentation": false,
+    "editor.tabSize": 4
+  },
+
+  // Configs for remote ssh
+  "remote.SSH.defaultExtensions": [
+    "rust-lang.rust",
+    "matklad.rust-analyzer",
+    "bungcip.better-toml",
+    "vadimcn.vscode-lldb",
+    "ms-vscode.cpptools",
+    "ms-vscode.cmake-tools",
+    "twxs.cmake",
+    "mutantdino.resourcemonitor",
+    "ms-python.python"
+  ],
+  "latex-workshop.view.pdf.viewer": "tab",
+  "latex-workshop.latexindent.path": "/Users/zhouyiren/bin/latexindent",
+  "latex-workshop.synctex.synctexjs.enabled": true,
+  "latex-workshop.message.update.show": false,
+
+  "[rust]": {
+    "editor.defaultFormatter": "matklad.rust-analyzer"
+  },
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook"
+  },
+
+  "terminal.integrated.inheritEnv": false,
+  "terminal.integrated.scrollback": 10000,
+
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.wordWrapColumn": 80
+  },
+
+  "markdown.enableExperimentalExtensionApi": true,
+
+  // Python
+  "python.pythonPath": "/Users/zhouyiren/.local/share/virtualenvs/src-WPMuI_zP/bin/python",
+  "python.formatting.provider": "black",
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "left"
+  },
+  "security.workspace.trust.untrustedFiles": "open",
+  "telemetry.telemetryLevel": "off",
+  "workbench.sideBar.location": "right",
+  "files.autoSave": "onFocusChange",
+  "redhat.telemetry.enabled": false,
+  "git.ignoreLegacyWarning": true,
+  "clangd.checkUpdates": true,
+  "C_Cpp.clang_format_fallbackStyle": "LLVM",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "workbench.iconTheme": "vscode-icons",
+  "window.zoomLevel": 2,
+  "files.insertFinalNewline": true
 }
