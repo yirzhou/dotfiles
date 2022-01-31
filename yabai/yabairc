@@ -1,8 +1,16 @@
+# the scripting-addition must be loaded manually if
+# you are running yabai on macOS Big Sur. Uncomment
+# the following line to have the injection performed
+# when the config is executed during startup.
+#
+# for this to work you must configure sudo such that
+# it will be able to run the command without password
+
 sudo yabai --load-sa
 yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 
 # Uniform gap value
-GAP=4
+GAP=8
 
 yabai -m config layout 			                 bsp
 yabai -m config mouse_follows_focus          off
@@ -32,31 +40,44 @@ yabai -m config left_padding   $GAP
 yabai -m config right_padding  $GAP
 yabai -m config window_gap     $GAP
 
-yabai -m config --space 2 window_gap 0
+yabai -m config --space 2 window_gap $GAP
 yabai -m config debug_output on
 
 # float system preferences
-yabai -m rule --add app="^AppCleaner$" sticky=on layer=above manage=off
-yabai -m rule --add app="^System Information$" sticky=on layer=above manage=off
-yabai -m rule --add app="^System Preferences$" sticky=on layer=above manage=off
-yabai -m rule --add app="^Installer$" sticky=on layer=above manage=off
-yabai -m rule --add app="^Activity Monitor$" sticky=on layer=above manage=off
-yabai -m rule --add app="^Keka$" sticky=on layer=above manage=off
+yabai -m rule --add app="^AppCleaner$" sticky=on manage=off
+yabai -m rule --add app="^System Information$" sticky=on manage=off
+yabai -m rule --add app="^System Preferences$" sticky=on manage=off
+yabai -m rule --add app="^Installer$" sticky=on manage=off
+yabai -m rule --add app="^Activity Monitor$" sticky=on manage=off
+yabai -m rule --add app="^Keka$" sticky=on manage=off
 yabai -m rule --add app="^Finder$" manage=off
 yabai -m rule --add app="^Karabiner-Elements$" manage=off
 yabai -m rule --add app="^Karabiner-EventViewer$" manage=off
 yabai -m rule --add app="^Spotify$" manage=off
 yabai -m rule --add app="^QQ音乐$" manage=off
-# yabai -m rule --add app="^Terminal$" manage=off
-# yabai -m rule --add app="^Alacritty$" manage=off
+yabai -m rule --add app="^FaceTime$" manage=off
+yabai -m rule --add app="^Docker Desktop$" manage=off
+yabai -m rule --add app="^App Store$" manage=off
+yabai -m rule --add app="^Messages$" manage=off
+yabai -m rule --add app="^Alfred 4$" manage=off
 yabai -m rule --add app="^Transmission$" manage=off
 yabai -m rule --add app="^Spark$" manage=off
+yabai -m rule --add app="^Mail$" manage=off
 yabai -m rule --add app="^Microsoft To Do$" manage=off
 yabai -m rule --add app="^WeChat$" manage=off
-yabai -m rule --add app="^CleanMyMac X$" manage=off
+yabai -m rule --add app="^Mini Program$" manage=off
+yabai -m rule --add app="^YesPlayMusic$" manage=off
 yabai -m rule --add app="^DaisyDisk$" manage=off
 yabai -m rule --add app="^Discord$" manage=off
 yabai -m rule --add app="^Slack$" manage=off
 yabai -m rule --add app="^Font Book$" manage=off
 yabai -m rule --add app="^IINA$" manage=off
-yabai -m rule --add app="^CMYNetwork加速器$" manage=off
+yabai -m rule --add app="^ClashX$" manage=off
+yabai -m rule --add app="^Stickies$" manage=off
+yabai -m rule --add app="^ImageOptim$" manage=off
+yabai -m rule --add app="^Sensei$" manage=off
+yabai -m rule --add app="^Docker$" manage=off
+yabai -m rule --add app="^Stats$" manage=off
+yabai -m rule --add app="^Mullvad VPN$" manage=off
+yabai -m rule --add app="^Music$" manage=off
+

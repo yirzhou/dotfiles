@@ -37,8 +37,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'airblade/vim-rooter'
 
     " Themes
+    Plug 'bluz71/vim-moonfly-colors'
     Plug 'RRethy/nvim-base16'
-    Plug 'Mofiqul/vscode.nvim'
 
     " Git integration
     Plug 'mhinz/vim-signify'
@@ -48,7 +48,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     " Native LSP
     Plug 'neovim/nvim-lspconfig'
-    Plug 'kabouzeid/nvim-lspinstall'
+    Plug 'williamboman/nvim-lsp-installer'
     Plug 'nvim-lua/lsp_extensions.nvim'
     Plug 'nvim-lua/completion-nvim'
     Plug 'hrsh7th/nvim-compe'

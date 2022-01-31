@@ -1,19 +1,21 @@
-# Open the terminal (Alacritty)
+# Open a terminal emulator
 shift + ctrl + alt + cmd - t : open -na /Applications/Alacritty.app
 # Open Brave
 shift + ctrl + alt + cmd - b : open -na /Applications/Brave\ Browser.app
+# Open Safari
+shift + ctrl + alt + cmd - s : open -na /Applications/Safari.app
 # Open VS Code
 shift + ctrl + alt + cmd - v : open -na /Applications/Visual\ Studio\ Code.app
-# Open Joplin
-shift + ctrl + alt + cmd - j : open -na /Applications/Joplin.app
+# Open Mark Text
+shift + ctrl + alt + cmd - w : open -na /Applications/Mark\ Text.app
 # Open the email client (Spark)
 shift + ctrl + alt + cmd - m : open -na /Applications/Spark.app
-# Open WeChat
-shift + ctrl + alt + cmd - w : open -na /Applications/WeChat.app
+# Open Amethyst
+shift + ctrl + alt + cmd - a : open -na /Applications/Amethyst.app
 
 # For yabai
 # Workspaces
-shift + ctrl + alt + cmd - w : yabai -m space --destroy
+shift + ctrl + alt + cmd - d : yabai -m space --destroy
 shift + ctrl + alt + cmd - n : yabai -m space --create 
 shift + ctrl + alt + cmd - r : yabai -m space --rotate 90
 
@@ -24,10 +26,10 @@ shift + ctrl + alt + cmd - k : yabai -m window --focus north
 shift + ctrl + alt + cmd - l : yabai -m window --focus east
 
 # Move window
-shift + cmd - h : yabai -m window --warp west
-shift + cmd - j : yabai -m window --warp south
-shift + cmd - k : yabai -m window --warp north
-shift + cmd - l : yabai -m window --warp east
+ctrl + alt - h : yabai -m window --warp west
+ctrl + alt - j : yabai -m window --warp south
+ctrl + alt - k : yabai -m window --warp north
+ctrl + alt - l : yabai -m window --warp east
 
 # Focus space
 ctrl - 1 : yabai -m space --focus 1
@@ -38,4 +40,4 @@ ctrl - 5 : yabai -m space --focus 5
 ctrl - 6 : yabai -m space --focus 6
 
 # Restart yabai
-ctrl + alt + cmd - r : launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"
+ctrl + alt + cmd - r : launchctl kickstart -k gui/(id -u)/homebrew.mxcl.yabai

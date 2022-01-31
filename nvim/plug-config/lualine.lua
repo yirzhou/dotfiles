@@ -1,15 +1,15 @@
 require'lualine'.setup {
   options = {
     icons_enabled = true,
-    theme = 'vscode',
-
-    component_separators = {'', ''},
-    section_separators = {'', ''},
-    disabled_filetypes = {}
+    theme = 'moonfly',
+    component_separators = { left = '', right = ''},
+    section_separators = { left = '', right = ''},
+    disabled_filetypes = {},
+    always_divide_middle = true,
   },
   sections = {
     lualine_a = {'mode'},
-    lualine_b = {'branch'},
+    lualine_b = {'branch', 'diff', 'diagnostics'},
     lualine_c = {'filename'},
     lualine_x = {'encoding', 'fileformat', 'filetype'},
     lualine_y = {'progress'},
@@ -26,4 +26,3 @@ require'lualine'.setup {
   tabline = {},
   extensions = {}
 }
-

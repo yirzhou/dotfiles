@@ -1,2 +1,2 @@
-vim.cmd('colorscheme base16-darcula')
+vim.cmd('colorscheme base16-xcode-dusk')
 
