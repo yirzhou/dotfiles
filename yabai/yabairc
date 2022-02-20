@@ -10,7 +10,7 @@ sudo yabai --load-sa
 yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 
 # Uniform gap value
-GAP=8
+GAP=6
 
 yabai -m config layout 			                 bsp
 yabai -m config mouse_follows_focus          off
@@ -75,8 +75,7 @@ yabai -m rule --add app="^IINA$" manage=off
 yabai -m rule --add app="^ClashX$" manage=off
 yabai -m rule --add app="^Stickies$" manage=off
 yabai -m rule --add app="^ImageOptim$" manage=off
-yabai -m rule --add app="^Sensei$" manage=off
-yabai -m rule --add app="^Docker$" manage=off
+yabai -m rule --add app="^nuclear$" manage=off
 yabai -m rule --add app="^Stats$" manage=off
 yabai -m rule --add app="^Mullvad VPN$" manage=off
 yabai -m rule --add app="^Music$" manage=off
