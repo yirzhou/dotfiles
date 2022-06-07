@@ -1,89 +1,270 @@
 [
   {
-    "type": "brightnessDown",
+    "type": "group",
+    "align": "left",
+    "title": "Fn",
     "width": 50,
-    "align": "left"
-  },
-  {
-    "type": "brightnessUp",
-    "width": 50,
-    "align": "left"
-  },
-  {
-    "type": "previous",
-    "width": 50,
-    "align": "left"
-  },
-  {
-    "type": "play",
-    "width": 50,
-    "align": "left"
-  },
-  {
-    "type": "next",
-    "width": 50,
-    "align": "left"
+    "items": [
+      {
+        "type": "close",
+        "bordered": false,
+        "width": 35,
+        "align": "left"
+      },
+      {
+        "type": "staticButton",
+        "title": "F1",
+        "action": "keyPress",
+        "keycode": 122,
+        "width": 60,
+        "align": "left"
+      },
+      {
+        "type": "staticButton",
+        "title": "F2",
+        "action": "keyPress",
+        "keycode": 120,
+        "width": 60,
+        "align": "left"
+      },
+      {
+        "type": "staticButton",
+        "title": "F3",
+        "action": "keyPress",
+        "keycode": 99,
+        "width": 60,
+        "align": "left"
+      },
+      {
+        "type": "staticButton",
+        "title": "F4",
+        "action": "keyPress",
+        "keycode": 118,
+        "width": 60,
+        "align": "left"
+      },
+      {
+        "type": "staticButton",
+        "title": "F5",
+        "action": "keyPress",
+        "keycode": 96,
+        "width": 60,
+        "align": "left"
+      },
+      {
+        "type": "staticButton",
+        "title": "F6",
+        "action": "keyPress",
+        "keycode": 97,
+        "width": 60,
+        "align": "left"
+      },
+      {
+        "type": "staticButton",
+        "title": "F7",
+        "action": "keyPress",
+        "keycode": 98,
+        "width": 60,
+        "align": "left"
+      },
+      {
+        "type": "staticButton",
+        "title": "F8",
+        "action": "keyPress",
+        "keycode": 100,
+        "width": 60,
+        "align": "left"
+      },
+      {
+        "type": "staticButton",
+        "title": "F9",
+        "action": "keyPress",
+        "keycode": 101,
+        "width": 60,
+        "align": "left"
+      },
+      {
+        "type": "staticButton",
+        "title": "F10",
+        "action": "keyPress",
+        "keycode": 109,
+        "width": 60,
+        "align": "left"
+      },
+      {
+        "type": "staticButton",
+        "title": "F11",
+        "action": "keyPress",
+        "keycode": 103,
+        "width": 60,
+        "align": "left"
+      },
+      {
+        "type": "staticButton",
+        "title": "F12",
+        "action": "keyPress",
+        "keycode": 111,
+        "width": 60,
+        "align": "left"
+      },
+      {
+        "type": "staticButton",
+        "title": "PgUp",
+        "action": "keyPress",
+        "keycode": 116,
+        "width": 60,
+        "align": "right"
+      },
+      {
+        "type": "staticButton",
+        "title": "PgDn",
+        "action": "keyPress",
+        "keycode": 121,
+        "width": 60,
+        "align": "right"
+      }
+    ]
   },
 
   {
-    "type": "volumeDown",
-    "bordered": false,
-    "align": "right",
-    "width": 30
-  },
-  {
-    "type": "volume",
-    "width": 240,
-    "align": "right"
-  },
-  {
-    "type": "volumeUp",
-    "bordered": false,
-    "align": "right",
-    "width": 30
-  },
-
-  {
-    "type": "network",
-    "flip": true,
-    "align": "right",
-    "bordered": false,
-    "width": 70
-  },
-  {
-    "width": 75,
-    "align": "right",
-    "type": "appleScriptTitledButton",
-    "source": {
-      "inline": "set mem to do shell script \"ps -A -o %mem | awk '{s+=$1}END{print s}'\"\rreturn mem & \"%\""
-    },
+    "type": "staticButton",
     "action": "appleScript",
     "actionAppleScript": {
-      "inline": "activate application \"Activity Monitor\"\rtell application \"System Events\"\r\ttell process \"Activity Monitor\"\r\t\ttell radio button \"CPU\" of radio group 1 of group 2 of toolbar 1 of window 1 to perform action \"AXPress\"\r\tend tell\rend tell"
+      "inline": "tell application \"System Events\" to keystroke \"q\" using {control down, command down}"
     },
-    "refreshInterval": 5,
+    "align": "left",
+    "width": 40,
+    "title": "",
+    "bordered": false,
     "image": {
-      "filePath": "~/Library/Application Support/MTMR/images/ram.png"
+      "base64": "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"
     }
   },
+
   {
-    "type": "shellScriptTitledButton",
-    "width": 70,
-    "align": "right",
-    "refreshInterval": 5,
-    "source": {
-      "inline": "top -l 2 -n 0 -F | egrep -o ' \\d*\\.\\d+% idle' | tail -1 | awk -F% '{p = 100 - $1; if (p > 30) c = \"\\033[33m\"; if (p > 70) c = \"\\033[30;43m\"; printf \"%s%4.1f%%\\n\", c, p}'"
-    },
-    "action": "appleScript",
-    "actionAppleScript": {
-      "inline": "activate application \"Activity Monitor\"\rtell application \"System Events\"\r\ttell process \"Activity Monitor\"\r\t\ttell radio button \"CPU\" of radio group 1 of group 2 of toolbar 1 of window 1 to perform action \"AXPress\"\r\tend tell\rend tell"
-    },
-    "image": {
-      "filePath": "~/Library/Application Support/MTMR/images/cpu.png"
-    },
+    "type": "darkMode",
+    "width": 40,
+    "align": "left",
     "bordered": false
   },
 
+  {
+    "type": "inputsource",
+    "width": 40,
+    "align": "left"
+  },
+
+  {
+    "type": "brightnessDown",
+    "width": 40,
+    "align": "left",
+    "bordered": false
+  },
+  {
+    "type": "brightnessUp",
+    "width": 40,
+    "align": "left",
+    "bordered": false
+  },
+
+  {
+    "type": "previous",
+    "width": 40,
+    "align": "left",
+    "bordered": false
+  },
+  {
+    "type": "play",
+    "width": 40,
+    "align": "left",
+    "bordered": false
+  },
+  {
+    "type": "next",
+    "width": 40,
+    "align": "left",
+    "bordered": false
+  },
+  // {
+  //   "type": "staticButton",
+  //   "title": "✎ Conf",
+  //   "bordered": false,
+  //   "align": "left",
+  //   "width": 75,
+  //   "action": "appleScript",
+  //   "actionAppleScript": {
+  //     "inline": "tell application \"System Events\" to key code 43 using command down"
+  //   },
+  //   "longAction": "appleScript",
+  //   "longActionAppleScript": {
+  //     "inline": "tell application \"System Events\" to key code 3 using {command down, control down}"
+  //   }
+  // },
+
+  {
+    "type": "volume",
+    "width": 250,
+    "align": "right",
+    "image": {
+      "base64": "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"
+    }
+  },
+
+  // {
+  //   "type": "staticButton",
+  //   "title": "⇤",
+  //   "align": "right",
+  //   "bordered": false,
+  //   "width": 30,
+  //   "action": "appleScript",
+  //   "actionAppleScript": {
+  //     "inline": "tell application \"System Events\" to key code 123 using {command down, option down}"
+  //   },
+  //   "longAction": "appleScript",
+  //   "longActionAppleScript": {
+  //     "inline": "tell application \"System Events\" to key code 3 using {command down, control down}"
+  //   }
+  // },
+  // {
+  //   "type": "staticButton",
+  //   "title": "TABS",
+  //   "align": "right",
+  //   "bordered": false
+  // },
+  // {
+  //   "type": "staticButton",
+  //   "title": "⇥",
+  //   "align": "right",
+  //   "bordered": false,
+  //   "width": 30,
+  //   "action": "appleScript",
+  //   "actionAppleScript": {
+  //     "inline": "tell application \"System Events\" to key code 124 using {command down, option down}"
+  //   },
+  //   "longAction": "appleScript",
+  //   "longActionAppleScript": {
+  //     "inline": "tell application \"System Events\" to key code 3 using {command down, control down}"
+  //   }
+  // },
+
+  // {
+  //   "type": "staticButton",
+  //   "title": "BTC",
+  //   "bordered": false,
+  //   "align": "right"
+  // },
+
+  {
+    "type": "currency",
+    "refreshInterval": 60, // in seconds
+    "align": "right",
+    "width": 120,
+    "from": "BTC",
+    "to": "USD",
+    "full": true, // BTC‣1337.1337$
+    "action": "openUrl",
+    "url": "https://cryptowat.ch/markets/kraken/btc/usd"
+  },
   {
     "type": "battery",
     "refreshInterval": 60,
@@ -93,14 +274,14 @@
     "bordered": false
   },
   {
-    "type": "inputsource",
-    "width": 40,
-    "align": "right"
-  },
-  {
-    "type": "darkMode",
-    "width": 40,
+    "type": "timeButton",
+    "formatTemplate": "MMM d hh:mm",
     "align": "right",
-    "bordered": false
+    "bordered": false,
+    "longAction": "appleScript",
+    "longActionAppleScript": {
+      "inline": "display dialog (current date) as string"
+    },
+    "width": 115
   }
 ]
