@@ -1,0 +1,25 @@
+// Settings in here override those in "Default/Preferences.sublime-settings",
+// and are overridden in turn by syntax-specific settings.
+{
+	"font_face": "Hack Nerd Font Mono",
+	"font_size": 14,
+	"line_padding_top": 1,
+	"line_padding_bottom": 1,
+	"save_on_focus_lost": true,
+	"ignored_packages":
+	[
+		"Vintage",
+	],
+	"ClangFormat": {
+      "format_on_save": true,
+      "indent_width": 4,
+      "style": "WebKit",
+      "column_limit": 80,
+    },
+	"color_scheme": "auto",
+	"light_color_scheme": "Packages/Visual Studio Bold Color Scheme/Visual Studio Bold.tmTheme",
+	"dark_color_scheme": "Packages/Darkula Color Scheme/darkula.tmTheme",
+	"theme": "auto",
+	"dark_theme": "Gravity.sublime-theme",
+	"light_theme": "Reverse Gravity.sublime-theme",
+}
