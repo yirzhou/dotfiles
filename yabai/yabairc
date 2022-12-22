@@ -6,8 +6,11 @@
 # for this to work you must configure sudo such that
 # it will be able to run the command without password
 
-sudo yabai --load-sa
 yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
+yabai -m signal --add event=window_focused action="sketchybar --trigger window_focus"
+yabai -m signal --add event=window_created action="sketchybar --trigger windows_on_spaces"
+yabai -m signal --add event=window_destroyed action="sketchybar --trigger windows_on_spaces"
+sudo yabai --load-sa
 
 # Uniform gap value
 GAP=6
@@ -17,7 +20,7 @@ yabai -m config mouse_follows_focus          off
 yabai -m config focus_follows_mouse          off
 yabai -m config window_placement             second_child
 yabai -m config window_topmost               off
-yabai -m config window_shadow                on
+yabai -m config window_shadow                off
 yabai -m config window_opacity               off
 yabai -m config window_opacity_duration      0.0
 yabai -m config active_window_opacity        1.0
@@ -34,7 +37,7 @@ yabai -m config mouse_action1                move
 yabai -m config mouse_action2                resize
 yabai -m config mouse_drop_action            swap
 
-yabai -m config top_padding    $GAP
+yabai -m config top_padding    9
 yabai -m config bottom_padding $GAP
 yabai -m config left_padding   $GAP
 yabai -m config right_padding  $GAP
@@ -46,7 +49,7 @@ yabai -m config debug_output on
 # float system preferences
 yabai -m rule --add app="^AppCleaner$" sticky=on manage=off
 yabai -m rule --add app="^System Information$" sticky=on manage=off
-yabai -m rule --add app="^System Preferences$" sticky=on manage=off
+yabai -m rule --add app="^System Settings$" sticky=on manage=off
 yabai -m rule --add app="^Installer$" sticky=on manage=off
 yabai -m rule --add app="^Activity Monitor$" sticky=on manage=off
 yabai -m rule --add app="^Keka$" sticky=on manage=off
@@ -54,19 +57,19 @@ yabai -m rule --add app="^Finder$" manage=off
 yabai -m rule --add app="^Karabiner-Elements$" manage=off
 yabai -m rule --add app="^Karabiner-EventViewer$" manage=off
 yabai -m rule --add app="^Spotify$" manage=off
-yabai -m rule --add app="^QQ音乐$" manage=off
+yabai -m rule --add app="^Telegram$" manage=off
 yabai -m rule --add app="^FaceTime$" manage=off
 yabai -m rule --add app="^Docker Desktop$" manage=off
 yabai -m rule --add app="^App Store$" manage=off
 yabai -m rule --add app="^Messages$" manage=off
-yabai -m rule --add app="^Alfred 4$" manage=off
+yabai -m rule --add app="^Alfred 5$" manage=off
 yabai -m rule --add app="^Transmission$" manage=off
 yabai -m rule --add app="^Spark$" manage=off
 yabai -m rule --add app="^Mail$" manage=off
 yabai -m rule --add app="^Microsoft To Do$" manage=off
 yabai -m rule --add app="^WeChat$" manage=off
 yabai -m rule --add app="^Mini Program$" manage=off
-yabai -m rule --add app="^YesPlayMusic$" manage=off
+yabai -m rule --add app="^AltTab$" manage=off
 yabai -m rule --add app="^DaisyDisk$" manage=off
 yabai -m rule --add app="^Discord$" manage=off
 yabai -m rule --add app="^Slack$" manage=off

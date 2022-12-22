@@ -1,5 +1,5 @@
 # Open a terminal emulator
-shift + ctrl + alt + cmd - t : open -na /Applications/Alacritty.app
+shift + ctrl + alt + cmd - t : open -na /Applications/Kitty.app
 # Open Brave
 shift + ctrl + alt + cmd - b : open -na /Applications/Brave\ Browser.app
 # Open Safari
