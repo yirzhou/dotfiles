@@ -1,4 +1,6 @@
 {
+  "window.autoDetectColorScheme": true,
+
   "workbench.colorCustomizations": {
     "[Nord]": {
       "editor.selectionHighlightBackground": "#2e3440",
@@ -13,67 +15,119 @@
     }
   },
 
-  "editor.semanticTokenColorCustomizations": {
-    "enabled": true,
-    "rules": {
-      "magicFunction:python": "#ee0000",
-      "function.declaration:python": "#990000",
-      "*.decorator:python": "#0000dd",
-      "*.typeHint:python": "#5500aa",
-      "*.typeHintComment:python": "#aaaaaa",
-      "parameter:python": "#aaaaaa"
-    }
-  },
-
   "editor.tokenColorCustomizations": {
     "textMateRules": [
       {
-        "name": "italic font",
         "scope": [
           "comment",
-          "keyword",
-          "storage",
-          "keyword.control",
-          "keyword.control.from",
-          "keyword.control.flow",
-          "keyword.operator.new",
-          "keyword.control.import",
-          "keyword.control.export",
-          "keyword.control.default",
-          "keyword.control.trycatch",
-          "keyword.control.conditional",
-          "storage.type",
-          "storage.type.class",
-          "storage.modifier.tsx",
-          "storage.type.function",
-          "storage.modifier.async",
-          "variable.language",
-          "variable.language.this",
-          "variable.language.super",
-          "meta.class",
-          "meta.var.expr",
-          "constant.language.null",
-          "support.type.primitive",
-          "entity.name.method.js",
+          "comment.block",
+          "comment.block.documentation",
+          "comment.line",
+          "constant",
+          "constant.character",
+          "constant.character.escape",
+          "constant.numeric",
+          "constant.numeric.integer",
+          "constant.numeric.float",
+          "constant.numeric.hex",
+          "constant.numeric.octal",
+          "constant.other",
+          "constant.regexp",
+          "constant.rgb-value",
+          "emphasis",
+          "entity",
+          "entity.name",
+          "entity.name.class",
+          "entity.name.function",
+          "entity.name.method",
+          "entity.name.section",
+          "entity.name.selector",
+          "entity.name.tag",
+          "entity.name.type",
+          "entity.other",
           "entity.other.attribute-name",
-          "punctuation.definition.comment",
-          "text.html.basic entity.other.attribute-name",
-          "tag.decorator.js entity.name.tag.js",
-          "tag.decorator.js punctuation.definition.tag.js",
-          "source.js constant.other.object.key.js string.unquoted.label.js"
+          "entity.other.inherited-class",
+          "invalid",
+          "invalid.deprecated",
+          "invalid.illegal",
+          "keyword",
+          "keyword.control",
+          "keyword.operator",
+          "keyword.operator.new",
+          "keyword.operator.assignment",
+          "keyword.operator.arithmetic",
+          "keyword.operator.logical",
+          "keyword.other",
+          "markup",
+          "markup.bold",
+          "markup.changed",
+          "markup.deleted",
+          "markup.heading",
+          "markup.inline.raw",
+          "markup.inserted",
+          "markup.italic",
+          "markup.list",
+          "markup.list.numbered",
+          "markup.list.unnumbered",
+          "markup.other",
+          "markup.quote",
+          "markup.raw",
+          "markup.underline",
+          "markup.underline.link",
+          "meta",
+          "meta.block",
+          "meta.cast",
+          "meta.class",
+          "meta.function",
+          "meta.function-call",
+          "meta.preprocessor",
+          "meta.return-type",
+          "meta.selector",
+          "meta.tag",
+          "meta.type.annotation",
+          "meta.type",
+          "punctuation.definition.string.begin",
+          "punctuation.definition.string.end",
+          "punctuation.separator",
+          "punctuation.separator.continuation",
+          "punctuation.terminator",
+          "storage",
+          "storage.modifier",
+          "storage.type",
+          "string",
+          "string.interpolated",
+          "string.other",
+          "string.quoted",
+          "string.quoted.double",
+          "string.quoted.other",
+          "string.quoted.single",
+          "string.quoted.triple",
+          "string.regexp",
+          "string.unquoted",
+          "strong",
+          "support",
+          "support.class",
+          "support.constant",
+          "support.function",
+          "support.other",
+          "support.type",
+          "support.type.property-name",
+          "support.variable",
+          "variable",
+          "variable.language",
+          "variable.name",
+          "variable.other",
+          "variable.other.readwrite",
+          "variable.parameter"
         ],
         "settings": {
-          "fontStyle": "italic"
+          "fontStyle": ""
         }
       }
     ]
   },
 
-  "window.autoDetectColorScheme": true,
-  "terminal.integrated.fontFamily": "Iosevka Nerd Font Mono",
-  "terminal.integrated.fontSize": 10,
-  "terminal.integrated.cursorStyle": "underline",
-  "terminal.external.osxExec": "Alacritty.app",
+  "terminal.external.osxExec": "kitty.app",
   "terminal.integrated.profiles.osx": {
     "bash": {
       "path": "bash",
@@ -93,7 +147,7 @@
       "icon": "terminal-powershell"
     },
     "fish": {
-      "path": "/usr/local/bin/fish"
+      "path": "/opt/homebrew/bin/fish"
     }
   },
   "terminal.integrated.defaultProfile.osx": "fish",
@@ -106,18 +160,23 @@
     "**/.factorypath": true
   },
 
+  "terminal.integrated.fontFamily": "Iosevka Nerd Font Mono",
+  "terminal.integrated.fontSize": 17,
+  "terminal.integrated.cursorStyle": "underline",
   "explorer.confirmDragAndDrop": false,
   "settingsSync.ignoredExtensions": ["ms-vscode-remote.remote-wsl"],
-  "editor.fontFamily": "'Iosevka', 'Hasklig', 'Ligalex Mono', 'JetBrains Mono'",
-  "editor.fontSize": 12,
-  "editor.fontWeight": "normal",
+  "editor.fontSize": 17,
+  "editor.fontFamily": "'Iosevka', 'Hack',   'Monaco',  'Hasklig', 'Apple Color Emoji', monospace",
+  "editor.fontWeight": "400",
+  "editor.lineHeight": 23,
   "editor.minimap.enabled": false,
-  "editor.fontLigatures": true,
+  "editor.fontLigatures": "'dlig', 'CLIK', 'HSKL'",
   "editor.semanticHighlighting.enabled": false,
   "editor.formatOnSave": true,
   "editor.suggestSelection": "first",
-  // "editor.wordWrap": "wordWrapColumn",
-  // "editor.wordWrapColumn": 80,
+  "editor.wordWrap": "wordWrapColumn",
+  "editor.wordWrapColumn": 80,
+  // "editor.parameterHints.enabled": false,
   // "editor.wordBasedSuggestions": false,
 
   "launch": {
@@ -161,13 +220,10 @@
   },
 
   // C/C++
-  "clang-format.executable": "/usr/local/opt/llvm/bin/clang-format",
-  "clang-format.fallbackStyle": "Google",
-  "clang-format.language.cpp.style": "Google",
-  "C_Cpp.updateChannel": "Insiders",
-  "C_Cpp.intelliSenseEngine": "Disabled",
+  "clang-format.executable": "/opt/homebrew/bin/clang-format",
+  "C_Cpp.intelliSenseEngine": "disabled",
   "cmake.configureOnOpen": false,
-  "clangd.path": "/Users/zhouyiren/Library/Application Support/Code/User/globalStorage/llvm-vs-code-extensions.vscode-clangd/install/13.0.0/clangd_13.0.0/bin/clangd",
+  "clangd.path": "/opt/homebrew/opt/llvm/bin/clangd",
   "[cpp]": {
     "editor.defaultFormatter": "xaver.clang-format",
     "editor.detectIndentation": false,
@@ -181,12 +237,7 @@
 
   // Configs for remote ssh
   "remote.SSH.defaultExtensions": [
-    "rust-lang.rust",
-    "matklad.rust-analyzer",
     "bungcip.better-toml",
-    "vadimcn.vscode-lldb",
-    "ms-vscode.cpptools",
-    "ms-vscode.cmake-tools",
     "twxs.cmake",
     "mutantdino.resourcemonitor",
     "ms-python.python"
@@ -195,6 +246,28 @@
   "latex-workshop.latexindent.path": "/Users/zhouyiren/bin/latexindent",
   "latex-workshop.synctex.synctexjs.enabled": true,
   "latex-workshop.message.update.show": false,
+
+  "latex-workshop.latex.tools": [
+    {
+      "name": "xelatexmk",
+      "command": "latexmk",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-xelatex",
+        "-outdir=%OUTDIR%",
+        "%DOC%"
+      ]
+    }
+  ],
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "latexmk (xelatex)",
+      "tools": ["xelatexmk"]
+    }
+  ],
+  "latex-workshop.latex.recipe.default": "latexmk (xelatex)",
 
   "[rust]": {
     "editor.defaultFormatter": "matklad.rust-analyzer"
@@ -213,12 +286,25 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.wordWrapColumn": 80
   },
+  "[java]": {
+    "editor.defaultFormatter": "redhat.java"
+  },
 
   "markdown.enableExperimentalExtensionApi": true,
 
   // Python
-  "python.pythonPath": "/Users/zhouyiren/opt/miniconda3/envs/intro2dl/bin/python",
   "python.formatting.provider": "black",
+  "python.sortImports.path": "/opt/miniconda3/bin/isort",
+  "python.sortImports.args": ["--profile", "black"],
+  "python.formatting.blackArgs": ["--line-length", "79"],
+  "python.linting.pylintArgs": ["-j", "8"],
+
+  "[python]": {
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    }
+  },
+
   "notebook.cellToolbarLocation": {
     "default": "right",
     "jupyter-notebook": "left"
@@ -230,11 +316,28 @@
   "redhat.telemetry.enabled": false,
   "git.ignoreLegacyWarning": true,
   "clangd.checkUpdates": true,
-  "C_Cpp.clang_format_fallbackStyle": "LLVM",
   "diffEditor.ignoreTrimWhitespace": false,
   "workbench.iconTheme": "vscode-icons",
-  "window.zoomLevel": 2,
   "files.insertFinalNewline": true,
   "workbench.activityBar.visible": false,
-  "workbench.colorTheme": "Xcode Default Dark"
+  "python.defaultInterpreterPath": "/Users/zhouyiren/opt/miniconda3/bin/python",
+  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "python.linting.pylintEnabled": true,
+  "python.linting.enabled": false,
+
+  "editor.inlayHints.enabled": "off",
+  "clang-format.style": "",
+  "C_Cpp.clang_format_style": "file:/Users/yirenzhou/.config/clang-format/.clang-format",
+  // "clang-format.language.cpp.style": "LLVM",
+  // "clang-format.fallbackStyle": "LLVM",
+
+  "editor.cursorBlinking": "phase",
+
+  "leetcode-problem-rating.workspaceFolder": "/Users/yirenzhou/.leetcode",
+  "workbench.preferredDarkColorTheme": "Darcula",
+  "workbench.colorTheme": "Darcula",
+  "C_Cpp.clang_format_fallbackStyle": "{BasedOnStyle: LLVM, IndentWidth: 4, AllowShortBlocksOnASingleLine: Always, AllowShortIfStatementsOnASingleLine: AllIfsAndElse}",
+  "clang-format.language.typescript.fallbackStyle": "",
+  "clang-format.language.cpp.style": "{BasedOnStyle: LLVM, IndentWidth: 4, AllowShortBlocksOnASingleLine: Always, AllowShortIfStatementsOnASingleLine: AllIfsAndElse}",
+  "workbench.preferredLightColorTheme": "Notepad++ default"
 }
